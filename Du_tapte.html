@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
+    <style>
+      h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+	      font-size: 60px;
+        padding: 100px;
+      }
+    </style>
+  </head>
+
+  <body onload="tekst_animasjon('Du ble bitt av romvesenet og døde en sakte og smertefull død.')">
+
+    <h1>Jo</h1>
+
+
+    <script>
+    let id;
+    function tekst_animasjon(tekst) {
+      document.querySelector("h1").textContent = "";
+      console.log("jo");
+      let i = 0;
+      clearInterval(id);
+      id = setInterval(frame, 100);
+      function frame() {
+        if (i == 255) {
+          clearInterval(id);
+        } else {
+          document.querySelector("h1").textContent +=
+          tekst.charAt(i);
+          i++;
+        }
+      }
+    }
+    </script>
+  </body>
+</html>

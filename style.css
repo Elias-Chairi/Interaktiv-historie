@@ -1,0 +1,15 @@
+* {
+  font-family: Courier New, monospace;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+h2{
+  margin: 20px;
+}
+canvas {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+}
